@@ -30,7 +30,7 @@ app.get("/post", (req, res) => {
 });
 app.post("/post", (req, res) => {
   let { username, content } = req.body;
-  mockDataPosts.push({ username, content });
+  mockDataPosts.unshift({ username, content });
   // res.send("You have added a post successfully!");
   res.redirect("/post"); //sends a GET request to the provided URL.
 });
