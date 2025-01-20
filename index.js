@@ -31,7 +31,8 @@ app.get("/post", (req, res) => {
 app.post("/post", (req, res) => {
   let { username, content } = req.body;
   mockDataPosts.push({ username, content });
-  res.send("You have added a post successfully!");
+  // res.send("You have added a post successfully!");
+  res.redirect("/post"); //sends a GET request to the provided URL.
 });
 
 app.get("/post/new", (req, res) => {
@@ -41,3 +42,5 @@ app.get("/post/new", (req, res) => {
 app.listen(PORT, () => {
   console.log("Listening to port: ", PORT);
 });
+
+/* People generally don't write GitHub commit messages in the past tense because the preferred style is to use the imperative mood (present tense), which essentially acts like a command, describing what the commit does to the code rather than what the developer did to make the change. This makes it clearer and more concise when reviewing code changes and understanding the impact of a commit. */
