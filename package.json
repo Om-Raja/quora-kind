@@ -1,0 +1,16 @@
+{
+  "name": "quora-kind",
+  "version": "1.0.0",
+  "description": "This project is built to bring REST in practice by me.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Om Raja",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
