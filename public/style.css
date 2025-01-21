@@ -1,42 +1,49 @@
-*{
-    box-sizing: border-box; /*If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+* {
+  box-sizing: border-box; /*If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
 */
 }
-h2{
-    color: maroon;
+h2 {
+  color: maroon;
 }
-body{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+body {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.post-card{
-    width: 100%;
-    height: 200px;
-    border: 1px solid rgb(65, 59, 59);
-    background-color: rgb(226, 225, 225);
-    padding: 20px 30px;
-    border-radius: 20px;
-    margin: 20px 0;
+.post-card {
+  width: 100%;
+  height: 200px;
+  border: 1px solid rgb(65, 59, 59);
+  background-color: rgb(226, 225, 225);
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin: 20px 0;
 }
-.post-username{
-    font-style: italic;
-    text-align: start;
+.post-username {
+  font-style: italic;
+  text-align: start;
 }
-#addPostBtn{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    position: fixed;
-    right: 30px;
-    bottom: 20px;
-    z-index:2;
+#addPostBtn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 2;
 }
-#addPostBtn div{
-    border: 1px solid rgb(92, 91, 91);
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: rgb(54, 68, 222);
+#addPostBtn div {
+  border: 1px solid rgb(92, 91, 91);
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgb(54, 68, 222);
+}
 
+/* show route */
+.see-post-btn {
+  text-decoration: none;
+  border: 1px solid green;
+  border-radius: 20px;
+  padding: 4px 8px;
 }

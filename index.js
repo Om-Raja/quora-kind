@@ -42,11 +42,9 @@ app.get("/post/new", (req, res) => {
 //show route
 app.get("/post/:id", (req, res)=>{
   let {id} = req.params;
-  console.log(id);
   let post = mockDataPosts.find((p)=>{
-    return (id == p.id);
+    return (id == p.id); // === was throwing an error. ERROR: post is undefined, then I used ==
   });
- console.log(post);
  if(post){
    res.render("show.ejs", {post});
  }else{
