@@ -39,6 +39,21 @@ app.get("/post/new", (req, res) => {
   res.render("newPost.ejs");
 });
 
+//show route
+app.get("/post/:id", (req, res)=>{
+  let {id} = req.params;
+  console.log(id);
+  let post = mockDataPosts.find((p)=>{
+    return (id == p.id);
+  });
+ console.log(post);
+ if(post){
+   res.render("show.ejs", {post});
+ }else{
+  res.status(404).send("Post not found");
+ }
+});
+
 app.listen(PORT, () => {
   console.log("Listening to port: ", PORT);
 });
