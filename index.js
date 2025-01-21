@@ -1,4 +1,5 @@
 const express = require("express");
+const {v4: uuidv4} = require("uuid");
 const mockDataPosts = require("./utils/mockdata");
 const path = require("path");
 const app = express();
@@ -30,7 +31,8 @@ app.get("/post", (req, res) => {
 });
 app.post("/post", (req, res) => {
   let { username, content } = req.body;
-  mockDataPosts.unshift({ username, content });
+  let id = uuidv4();
+  mockDataPosts.unshift({ id, username, content });
   // res.send("You have added a post successfully!");
   res.redirect("/post"); //sends a GET request to the provided URL.
 });

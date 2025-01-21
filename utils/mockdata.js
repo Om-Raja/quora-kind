@@ -1,11 +1,12 @@
+const {v4: uuidv4} = require("uuid");
 const posts = [
   {
-    id: 11,
+    id: uuidv4(),
     username: "omraja451",
     content: "Discipline is most beautiful magic",
   },
   {
-    id: 10,
+    id: uuidv4(),
     username: "nikuser",
     content: "Consistency is the key to success.",
   },
@@ -15,42 +16,42 @@ const posts = [
     content: "Books are a uniquely portable magic.",
   },
   {
-    id: 8,
+    id: uuidv4(),
     username: "fitnessfreak",
     content: "A healthy body fuels a healthy mind.",
   },
   {
-    id: 7,
+    id: uuidv4(),
     username: "foodie_123",
     content: "Good food equals good mood.",
   },
   {
-    id: 6,
+    id: uuidv4(),
     username: "motivation_hub",
     content: "The best time to start was yesterday; the second best is now.",
   },
   {
-    id: 5,
+    id: uuidv4(),
     username: "lifehackguru",
     content: "Time management is the greatest life hack.",
   },
   {
-    id: 4,
+    id: uuidv4(),
     username: "hustler_daily",
     content: "Dream big, work hard, stay humble.",
   },
   {
-    id: 3,
+    id: uuidv4(),
     username: "sportsfanatic",
     content: "Winners never quit, and quitters never win.",
   },
   {
-    id: 2,
+    id: uuidv4(),
     username: "startupmind",
     content: "Ideas are easy; execution is everything.",
   },
   {
-    id: 1,
+    id: uuidv4(),
     username: "kindnessmatters",
     content: "Kindness is a language everyone understands.",
   },

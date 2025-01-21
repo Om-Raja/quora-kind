@@ -24,6 +24,9 @@ body {
   font-style: italic;
   text-align: start;
 }
+.post-content{
+    font-size:1.3rem;
+}
 #addPostBtn {
   text-decoration: none;
   color: #fff;
@@ -43,7 +46,8 @@ body {
 /* show route */
 .see-post-btn {
   text-decoration: none;
-  border: 1px solid green;
+  border: 1px solid rgb(46, 64, 176);
   border-radius: 20px;
   padding: 4px 8px;
+  color: green;
 }
