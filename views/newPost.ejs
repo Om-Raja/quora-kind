@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add new post</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <form method="post" action="/post">
-        <input type="text" placeholder="Your username" name="username"/>
+        <input type="text" placeholder="Your username" name="username" style="width:280px; height: 40px"/>
         <br/><br/>
-        <textarea placeholder="Write a post" name="content" width="300px"></textarea>
+        <textarea placeholder="Write a post" name="content" rows="10" cols="35"></textarea>
         <br/><br/>
-        <button type="submit">Post</button>
+        <button class="new-post-btn" type="submit">Post</button>
     </form>
 </body>
 </html>

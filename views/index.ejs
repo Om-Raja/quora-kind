@@ -21,7 +21,15 @@
         <i class="fa-solid fa-circle-user"></i> <%=post.username%>
       </h4>
       <p class="post-content"><%=post.content%></p>
-      <a class="see-post-btn" href="http://localhost:8080/post/<%= post.id %>">See full post</a>
+      <a class="see-post-btn" href="http://localhost:8080/post/<%= post.id %>"
+        >See full post</a
+      >
+      &nbsp;&nbsp;&nbsp;
+      <a
+        class="edit-post-btn"
+        href="http://localhost:8080/post/<%=post.id %>/edit"
+        >Edit <i class="fa-solid fa-pen-to-square"></i
+      ></a>
     </div>
     <% } %>
     <a id="addPostBtn" href="http://localhost:8080/post/new"

@@ -1,15 +1,17 @@
 const express = require("express");
 const {v4: uuidv4} = require("uuid");
+const methodOverride = require("method-override"); // to understand overridden method
 const mockDataPosts = require("./utils/mockdata");
 const path = require("path");
 const app = express();
 const PORT = 8080;
 
+app.use(methodOverride("_method"));
 app.use(
   express.urlencoded({ extended: true }),
 ); /* It's middleware provided by Express to parse x-www-form-urlencoded data. This type of data is typically sent by HTML forms.
 When extended: true, it allows you to parse complex objects, like nested objects in the request body.*/
-
+app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public"))); //It tells Express, "Serve files from the public folder as static resources." This middleware makes files in a specified directory accessible to the client without explicitly writing routes for them.
@@ -53,6 +55,29 @@ app.get("/post/:id", (req, res)=>{
   res.status(404).send("Post not found");
  }
 });
+
+//update route
+
+// this route will send editing form when someone click edit button
+app.get("/post/:id/edit", (req, res)=>{
+  const {id} = req.params;
+  let post = mockDataPosts.find((p)=>p.id == id);
+
+  res.render("edit.ejs",{post});
+});
+//this route updates the post
+app.patch("/post/:id", (req, res)=>{
+  const {id} = req.params;
+  const newContent = req.body.content;
+
+  console.log(`newContent = ${newContent}`);
+  let post = mockDataPosts.find((p)=>(id == p.id));
+  post.content = newContent;
+  console.log(post);
+
+  res.status(200).redirect("/post");
+
+})
 
 app.listen(PORT, () => {
   console.log("Listening to port: ", PORT);
