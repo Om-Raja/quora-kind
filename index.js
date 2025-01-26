@@ -1,7 +1,7 @@
 const express = require("express");
 const {v4: uuidv4} = require("uuid");
 const methodOverride = require("method-override"); // to understand overridden method
-const mockDataPosts = require("./utils/mockdata");
+let mockDataPosts = require("./utils/mockdata");
 const path = require("path");
 const app = express();
 const PORT = 8080;
@@ -76,8 +76,14 @@ app.patch("/post/:id", (req, res)=>{
   console.log(post);
 
   res.status(200).redirect("/post");
+});
 
-})
+//destroy route
+app.delete("/post/:id", (req, res)=>{
+  const {id} = req.params;
+  mockDataPosts = mockDataPosts.filter((p)=>(p.id != id));
+  res.status(200).redirect("/post");
+});
 
 app.listen(PORT, () => {
   console.log("Listening to port: ", PORT);
