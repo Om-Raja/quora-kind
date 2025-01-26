@@ -13,6 +13,20 @@
     <h2 class="post-username"><i class="fa-solid fa-circle-user"></i> <%= post.username %></h2>
     <span>Post id: <%= post.id %></span>
     <p class="post-content"><%= post.content %></p>
+
+    <!-- edit button -->
+    <a
+        class="edit-post-btn"
+        href="http://localhost:8080/post/<%=post.id %>/edit"
+        >Edit <i class="fa-solid fa-pen-to-square"></i
+      ></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <!-- delete button -->
+    <form class="delete-form" method="post" action="/post/<%=post.id%>?_method=DELETE">
+      <button type="submit" class="delete-post-btn">Delete <i class="fa-regular fa-trash-can"></i></button>
+    </form>
   </div>
 </body>
 </html>

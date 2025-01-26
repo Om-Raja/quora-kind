@@ -70,10 +70,8 @@ app.patch("/post/:id", (req, res)=>{
   const {id} = req.params;
   const newContent = req.body.content;
 
-  console.log(`newContent = ${newContent}`);
   let post = mockDataPosts.find((p)=>(id == p.id));
   post.content = newContent;
-  console.log(post);
 
   res.status(200).redirect("/post");
 });

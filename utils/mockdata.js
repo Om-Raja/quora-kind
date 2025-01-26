@@ -11,7 +11,7 @@ const posts = [
     content: "Consistency is the key to success.",
   },
   {
-    id: 9,
+    id: uuidv4(),
     username: "booklover",
     content: "Books are a uniquely portable magic.",
   },
